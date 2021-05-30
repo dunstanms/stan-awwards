@@ -9,7 +9,10 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+import os
+import dj_database_url
+import django_heroku
+from decouple import config, Csv
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -40,8 +43,13 @@ INSTALLED_APPS = [
     'myawwards',
     'crispy_forms',
     'rest_framework',
+    'pyuploadcare.dj',
 ]
 
+UPLOADCARE = {
+    'pub_key': '2b709bca64245dd9e55e',
+    'secret': '0a60851de5f3db2dc728',
+}
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
