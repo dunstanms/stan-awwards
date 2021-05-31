@@ -8,7 +8,7 @@ from cloudinary.models import CloudinaryField
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
-    profile_picture = CloudinaryField('images/', default='default.png')
+    profile_picture = CloudinaryField('images/', default='default.jpg')
     bio = models.TextField(max_length=500, default="My Bio", blank=True)
     name = models.CharField(blank=True, max_length=120)
     location = models.CharField(max_length=60, blank=True)
@@ -31,7 +31,7 @@ class Post(models.Model):
     url = models.URLField(max_length=255)
     description = models.TextField(max_length=255)
     technologies = models.CharField(max_length=200, blank=True)
-    photo = CloudinaryField('1280x720')
+    photo = CloudinaryField('images/')
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="posts")
     date = models.DateTimeField(auto_now_add=True, blank=True)
 
