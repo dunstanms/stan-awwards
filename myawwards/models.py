@@ -2,13 +2,13 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
-from pyuploadcare.dj.models import ImageField
+# from pyuploadcare.dj.models import ImageField
 import datetime as dt
-
+from cloudinary.models import CloudinaryField
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
-    profile_picture = models.ImageField(upload_to='images/', default='default.png')
+    profile_picture = CloudinaryField('images/', default='default.png')
     bio = models.TextField(max_length=500, default="My Bio", blank=True)
     name = models.CharField(blank=True, max_length=120)
     location = models.CharField(max_length=60, blank=True)
@@ -31,7 +31,7 @@ class Post(models.Model):
     url = models.URLField(max_length=255)
     description = models.TextField(max_length=255)
     technologies = models.CharField(max_length=200, blank=True)
-    photo = ImageField(manual_crop='1280x720')
+    photo = CloudinaryField('1280x720')
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="posts")
     date = models.DateTimeField(auto_now_add=True, blank=True)
 
@@ -86,3 +86,6 @@ class Rating(models.Model):
 
     def __str__(self):
         return f'{self.post} Rating'
+
+class Photo(models.Model):
+  image = CloudinaryField('image')     

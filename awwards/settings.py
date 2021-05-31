@@ -11,9 +11,13 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
 import dj_database_url
-import django_heroku
 from decouple import config, Csv
 from pathlib import Path
+
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -43,13 +47,14 @@ INSTALLED_APPS = [
     'myawwards',
     'crispy_forms',
     'rest_framework',
-    'pyuploadcare.dj',
+    'cloudinary',
 ]
 
-UPLOADCARE = {
-    'pub_key': '2b709bca64245dd9e55e',
-    'secret': '0a60851de5f3db2dc728',
-}
+cloudinary.config( 
+  cloud_name = "dzub8b65i", 
+  api_key = "232297643923456", 
+  api_secret = "SI9zDZhG1rioWzfsydtlgS9DBg4" 
+)
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
