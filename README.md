@@ -5,15 +5,15 @@
 # Description  
 This project allows users to post their projects for other users to rate according to design, usability and content 
 ##  Live Link  
- Click []()  to visit the site
+ Click [Viewsite](https://stan-awwards.herokuapp.com/)  to visit the site
   
 ## Screenshots 
 ###### Home page
  
-<img src="">
+<img src="https://raw.githubusercontent.com/ubuntustan/stan-awwards/master/static/images/newread.png">
  
  ###### Rating of a post
- <img src=""> 
+ <img src="https://raw.githubusercontent.com/ubuntustan/stan-awwards/master/static/images/newarea.png"> 
 
 
  
@@ -93,4 +93,3 @@ If you have any question or contributions, please email me at [dunmmbehero@gmail
 
 * [![License](https://img.shields.io/packagist/l/loopline-systems/closeio-api-wrapper.svg)](https://github.com/ubuntustan/stan-awwards/blob/master/LICENSE)  
 * Copyright (c) 2021 **Dunstan Mmbehero**
-stan-ubuntustan100(superuser)
