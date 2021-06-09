@@ -15,7 +15,8 @@ This project allows users to post their projects for other users to rate accordi
  ###### Rating of a post
  <img src="https://raw.githubusercontent.com/ubuntustan/stan-awwards/master/static/images/newarea.png"> 
 
-
+## Erd diagram
+ <img src="https://raw.githubusercontent.com/ubuntustan/stan-awwards/master/static/images/awarderd.png">
  
 ## User Story  
   
