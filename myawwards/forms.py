@@ -15,7 +15,7 @@ class SignupForm(UserCreationForm):
 
 
 class PostForm(forms.ModelForm):
-    photo = CloudinaryField('image')
+    photo = CloudinaryField('media/')
 
     class Meta:
         model = Post
